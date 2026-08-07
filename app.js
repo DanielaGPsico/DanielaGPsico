@@ -24,17 +24,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeNav = () => {
     if (!nav || !toggle) return;
     nav.classList.remove('is-open');
+    document.body.classList.remove('is-nav-open');
+    header?.classList.remove('is-nav-open');
     toggle.setAttribute('aria-expanded', 'false');
     toggle.setAttribute('aria-label', 'Abrir menú');
-    document.body.style.overflow = '';
   };
 
   const openNav = () => {
     if (!nav || !toggle) return;
     nav.classList.add('is-open');
+    document.body.classList.add('is-nav-open');
+    header?.classList.add('is-nav-open');
     toggle.setAttribute('aria-expanded', 'true');
     toggle.setAttribute('aria-label', 'Cerrar menú');
-    document.body.style.overflow = 'hidden';
   };
 
   if (toggle && nav) {
@@ -48,8 +50,16 @@ document.addEventListener('DOMContentLoaded', () => {
       link.addEventListener('click', closeNav);
     });
 
+    nav.addEventListener('click', (event) => {
+      if (event.target === nav) closeNav();
+    });
+
     window.addEventListener('keydown', (event) => {
       if (event.key === 'Escape') closeNav();
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 780) closeNav();
     });
   }
 
