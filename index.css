@@ -832,10 +832,11 @@ body.is-nav-open {
 }
 
 .price-ribbon {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  padding: 0.25rem 0.55rem;
+  position: static;
+  display: inline-flex;
+  align-self: flex-start;
+  margin: 0 0 0.85rem;
+  padding: 0.28rem 0.65rem;
   background: var(--rose);
   color: var(--white);
   font-size: 0.7rem;
@@ -847,11 +848,10 @@ body.is-nav-open {
 
 .price-top {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
   gap: 0.75rem;
   margin-bottom: 0.35rem;
-  padding-right: 0.5rem;
 }
 
 .price-option h3 {
@@ -1835,8 +1835,6 @@ body.is-nav-open {
   }
 
   .price-ribbon {
-    top: 0.75rem;
-    right: 0.75rem;
     font-size: 0.65rem;
   }
 
