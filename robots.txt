@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://danielagpsico.github.io/DanielaGPsico/index.html
