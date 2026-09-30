@@ -2035,13 +2035,13 @@ body.is-nav-open {
   border-color: var(--rose-soft);
 }
 
-.faq-item summary {
+/* .faq-item summary {
   cursor: pointer;
   list-style: none;
   padding: 1rem 0;
   font-weight: 600;
   color: var(--ink);
-}
+} */
 
 .faq-item summary::-webkit-details-marker {
   display: none;
