@@ -2055,7 +2055,7 @@ body.is-nav-open {
 }
 
 .faq-item[open] summary::after {
-  content: "Ã¢ÂÂ";
+  content: "-";
 }
 
 .faq-item p {
